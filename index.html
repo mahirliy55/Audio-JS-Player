@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My sound page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <p id="logo"><i class="fas fa-music"></i>MUSIC</p>
+        </div>
+        <!-- Left part -->
+        <!-- Song image -->
+        <div class="left">
+            <img src="" alt="" id="track_image">
+            <div class="volume">
+                <p id="volume_show">90</p>
+                <i class="fas fa-volume-up" id="volume_icon" onclick="mute_sound()"></i>
+                <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+            </div>
+        </div>
+
+        <!-- Right part -->
+        <div class="right">
+            <div class="show_song_no">
+                <p id="present">1</p>
+                <p>/</p>
+                <p id="total">5</p>
+            </div>
+            <!-- Song title -->
+
+            <!-- Middle part -->
+            <p id="title">Title.mp3</p>
+            <p id="artist">Artist name</p>
+            <div class="middle">
+                <button onclick="previous_song()" id="pre"><i class="fas fa-step-backward"></i></button>
+                <button onclick="justplay()" id="play"><i class="fas fa-play"></i></button>
+                <button onclick="next_song()" id="next"><i class="fas fa-step-forward"></i></button>
+            </div>
+            <!-- Song duration part -->
+            <div class="duration">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" change="change_duration()">
+            </div>
+            <button id="auto" onclick="autoplay_switch()">Auto play <i class="fas fa-circle-notch"></i></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
